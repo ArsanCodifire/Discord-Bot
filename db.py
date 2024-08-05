@@ -12,7 +12,7 @@ st.title("Discord Pybot")
 async def main():
     st.write(f"Logged as {bot.user}")
 @bot.command()
-async def hello():
-    ctk.send(f"Hi")
+async def hello(ctk):
+    await ctk.send({ctx.author.mention}.")
     st.write("Used /hi func")
 bot.run(token)

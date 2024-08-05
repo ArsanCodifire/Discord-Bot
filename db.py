@@ -3,6 +3,10 @@ from discord.ext import commands as cmd
 import discord as ds
 token=st.seceret["TOKEN"]
 bot=cmd.Bot(command_prefix="/",intents=ds.Intents.all())
+st.set_page_config(
+    page_title="Pybot",
+    page_icon ="🤖"
+)
 @bot.event
 async def main():
     st.write("Discord Pybot")

@@ -1,4 +1,4 @@
-import discord
+import discord as ds
 from discord.ext import commands as cmd
 import streamlit as st
 token=st.secrets["TOKEN"]

@@ -1,7 +1,6 @@
 import streamlit as st
 from discord.ext import commands as cmd
 import discord as ds
-import threading
 token=st.secrets["TOKEN"]
 bot=cmd.Bot(command_prefix="/",intents=ds.Intents.all())
 st.set_page_config(

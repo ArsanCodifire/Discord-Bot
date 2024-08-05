@@ -19,6 +19,6 @@ def run():
 async def main():
     st.write(f"Logged as {bot.user}")
     bott= threading.Thread(target=run).start() 
-if __name__="__main__":
+if __name__=="__main__":
     main()
 

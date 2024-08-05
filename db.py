@@ -11,7 +11,7 @@ st.set_page_config(
 st.title("Discord Pybot")
 @bot.event
 async def on_ready():
-    print(f'Logged in as {bot.user}')
+    st.write(f'Logged in as {bot.user}')
 
 @bot.command()
 async def hi(ctx):

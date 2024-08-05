@@ -9,14 +9,15 @@ st.set_page_config(
     page_icon ="🤖"
 )
 st.title("Discord Pybot")
-@bot.event
+
 @bot.command()
 async def hi(ctx):
     await ctx.send(f'Hi {ctx.author.mention}!')
     st.write("Used /hi func")
 def run():
     bot.run(token)
-async def main():
+@bot.event
+def main():
     st.write(f"Logged as {bot.user}")
     bott= threading.Thread(target=run).start() 
 if __name__=="__main__":

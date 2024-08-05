@@ -7,9 +7,9 @@ st.set_page_config(
     page_title="Pybot",
     page_icon ="🤖"
 )
+st.title("Discord Pybot")
 @bot.event
 async def main():
-    st.write("Discord Pybot")
     st.write(f"Logged as {bot.user}")
 @bot.command()
 async def hello(ctk):

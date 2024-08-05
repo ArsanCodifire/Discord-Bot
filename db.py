@@ -1,5 +1,5 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands as cmd
 import streamlit as st
 token=st.secrets["TOKEN"]
 bot=cmd.Bot(command_prefix="/",intents=ds.Intents.all())

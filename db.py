@@ -15,9 +15,12 @@ async def on_ready():
 
 @bot.command()
 async def hi(ctx):
-    await ctx.send(f'Hi {ctx.author.mention}!')
-    time.sleep(15)
-    st.write("Used /hi func")
+    if not ctx.author==bot.user:
+        await ctx.send(f'Hi {ctx.author.mention}!')
+        time.sleep(15)
+        st.write("Used /hi func")
+    else:
+        no=1
 
 bot.run(token)
 

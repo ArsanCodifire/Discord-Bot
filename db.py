@@ -15,6 +15,7 @@ async def on_ready():
 
 @bot.command()
 async def hi(ctx):
+    time.sleep(10)
     await ctx.send(f'Hi {ctx.author.mention}!')
     time.sleep(15)
     st.write("Used /hi func")

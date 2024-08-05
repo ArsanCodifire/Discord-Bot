@@ -1,6 +1,7 @@
 import discord as ds
 from discord.ext import commands as cmd
 import streamlit as st
+import time
 token=st.secrets["TOKEN"]
 bot=cmd.Bot(command_prefix="/",intents=ds.Intents.all())
 st.set_page_config(
@@ -14,8 +15,9 @@ async def on_ready():
 
 @bot.command()
 async def hi(ctx):
-    st.write("Used /hi func")
     await ctx.send(f'Hi {ctx.author.mention}!')
+    time.sleep(15)
+    st.write("Used /hi func")
 
 bot.run(token)
 

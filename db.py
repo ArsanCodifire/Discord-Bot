@@ -1,6 +1,7 @@
 import streamlit as st
 from discord.ext import commands as cmd
 import discord as ds
+import threading
 token=st.secrets["TOKEN"]
 bot=cmd.Bot(command_prefix="/",intents=ds.Intents.all())
 st.set_page_config(
@@ -9,10 +10,15 @@ st.set_page_config(
 )
 st.title("Discord Pybot")
 @bot.event
-async def main():
-    st.write(f"Logged as {bot.user}")
 @bot.command()
 async def hi(ctx):
     await ctx.send(f'Hi {ctx.author.mention}!')
     st.write("Used /hi func")
-bot.run(token)
+def run():
+    bot.run(token)
+async def main():
+    st.write(f"Logged as {bot.user}")
+    bott= threading.Thread(target=run).start() 
+if __name__="__main__":
+    main()
+
